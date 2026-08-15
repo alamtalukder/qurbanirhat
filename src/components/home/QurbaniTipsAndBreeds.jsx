@@ -56,10 +56,8 @@ const breeds = [
 const QurbaniTipsAndBreeds = () => {
     return (
         <>
-            {/* ================= QURBANI TIPS ================= */}
             <section className="bg-green-50 py-20">
                 <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                    {/* Header */}
                     <div className="mx-auto max-w-2xl text-center">
                         <span className="font-semibold uppercase tracking-wider text-green-600">
                             Helpful Guide
@@ -74,8 +72,6 @@ const QurbaniTipsAndBreeds = () => {
                             Qurbani animal.
                         </p>
                     </div>
-
-                    {/* Tips */}
                     <div className="mt-12 grid gap-6 md:grid-cols-3">
                         {tips.map((tip, index) => (
                             <div
@@ -105,11 +101,8 @@ const QurbaniTipsAndBreeds = () => {
                     </div>
                 </div>
             </section>
-
-            {/* ================= TOP BREEDS ================= */}
             <section className="bg-white py-20">
                 <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                    {/* Header */}
                     <div className="mb-12 flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
                         <div>
                             <span className="font-semibold uppercase tracking-wider text-green-600">
@@ -125,7 +118,6 @@ const QurbaniTipsAndBreeds = () => {
                                 available in Bangladesh.
                             </p>
                         </div>
-
                         <Link
                             href="/breeds"
                             className="font-semibold text-green-600 hover:text-green-700"
@@ -134,7 +126,6 @@ const QurbaniTipsAndBreeds = () => {
                         </Link>
                     </div>
 
-                    {/* Breed Cards */}
                     <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
                         {breeds.map((breed) => (
                             <Link
@@ -144,7 +135,6 @@ const QurbaniTipsAndBreeds = () => {
                                 key={breed.name}
                                 className="group overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"
                             >
-                                {/* Image */}
                                 <div className="relative h-56 overflow-hidden">
                                     <Image
                                         src={breed.image}
@@ -153,14 +143,11 @@ const QurbaniTipsAndBreeds = () => {
                                         className="object-cover transition duration-500 group-hover:scale-110"
                                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                                     />
-
-                                    {/* Type */}
                                     <span className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-bold text-green-700 shadow backdrop-blur">
                                         {breed.type}
                                     </span>
                                 </div>
 
-                                {/* Content */}
                                 <div className="p-5">
                                     <h3 className="text-xl font-bold text-gray-900 transition group-hover:text-green-700">
                                         {breed.name}

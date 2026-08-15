@@ -10,7 +10,6 @@ const FeaturedAnimals = async () => {
     return (
         <section className="bg-white py-20">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                {/* Section Header */}
                 <div className="mb-12 flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
                     <div>
                         <span className="font-semibold uppercase tracking-wider text-green-600">
@@ -19,7 +18,7 @@ const FeaturedAnimals = async () => {
 
                         <h2 className="mt-2 text-3xl font-bold text-gray-900 sm:text-4xl">
                             Featured Animals
-                        </h2>
+                        </h2> 
 
                         <p className="mt-3 max-w-2xl text-gray-600">
                             Explore our carefully selected healthy cows and goats from
@@ -35,14 +34,12 @@ const FeaturedAnimals = async () => {
                     </Link>
                 </div>
 
-                {/* Animal Cards */}
                 <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
                     {featuredAnimals.map((animal) => (
                         <div
                             key={animal.id}
                             className="group overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"
                         >
-                            {/* Image */}
                             <div className="relative h-64 overflow-hidden bg-gray-100">
                                 <Image
                                     src={animal.image}
@@ -51,23 +48,12 @@ const FeaturedAnimals = async () => {
                                     className="object-cover transition duration-500 group-hover:scale-110"
                                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                                 />
-
-                                {/* Category */}
                                 <span className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-bold text-green-700 shadow backdrop-blur">
-                                    {animal.category}
+                                    {animal.type}
                                 </span>
 
-                                {/* Favorite */}
-                                <button
-                                    type="button"
-                                    aria-label={`Add ${animal.name} to favorites`}
-                                    className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-white/90 text-gray-600 shadow backdrop-blur transition hover:bg-red-50 hover:text-red-500"
-                                >
-                                    ♡
-                                </button>
                             </div>
 
-                            {/* Content */}
                             <div className="p-5">
                                 <div className="flex items-start justify-between gap-3">
                                     <div>
@@ -85,7 +71,6 @@ const FeaturedAnimals = async () => {
                                     </span>
                                 </div>
 
-                                {/* Details */}
                                 <div className="mt-5 grid grid-cols-2 gap-3 border-y border-gray-100 py-4">
                                     <div>
                                         <p className="text-xs text-gray-400">Weight</p>
@@ -115,8 +100,6 @@ const FeaturedAnimals = async () => {
                                         </p>
                                     </div>
                                 </div>
-
-                                {/* Price + Button */}
                                 <div className="mt-5 flex items-center justify-between gap-3">
                                     <div>
                                         <p className="text-xs text-gray-400">Price</p>

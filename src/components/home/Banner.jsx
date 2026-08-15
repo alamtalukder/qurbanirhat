@@ -6,7 +6,6 @@ import Link from "next/link";
 const Banner = () => {
   return (
     <section className="relative min-h-[650px] overflow-hidden">
-      {/* Background Image */}
       <Image
         src={"/banner.jpg"}
         alt="Cow and goat bazar"
@@ -14,11 +13,7 @@ const Banner = () => {
         priority
         className="object-cover object-center"
       />
-
-      {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/25 to-transparent" />
-
-      {/* Content */}
       <div className="relative z-10 mx-auto flex min-h-[650px] max-w-7xl items-center px-6 py-20 lg:px-8">
         <div className="max-w-2xl text-white">
           <span className="mb-5 inline-block rounded-full bg-white/15 px-5 py-2 text-sm font-medium backdrop-blur-md">
@@ -49,7 +44,6 @@ const Banner = () => {
             </Link>
           </div>
 
-          {/* Trust Features */}
           <div className="mt-10 flex flex-wrap gap-6 text-sm">
             <div className="flex items-center gap-2">
               <span className="text-xl">✓</span>
