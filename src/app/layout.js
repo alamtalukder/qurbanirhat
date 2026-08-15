@@ -3,12 +3,9 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
-
 const roboto = Roboto({
   subsets: ["latin"],
 });
-
-
 
 export const metadata = {
   title: "Qurbanirhat",
