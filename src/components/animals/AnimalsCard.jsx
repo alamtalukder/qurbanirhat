@@ -3,7 +3,7 @@ import Link from 'next/link';
 import React from 'react';
 
 const AnimalsCard = async () => {
-    const res = await fetch("http://localhost:3000/data.json");
+    const res = await fetch("https://qurbanirhat-neon.vercel.app/data.json");
     const animalCard = await res.json();
     console.log(animalCard);
     return (
