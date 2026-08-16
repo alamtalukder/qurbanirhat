@@ -9,7 +9,7 @@ const AnimalsCard = async () => {
     return (
         <div className='mx-auto max-w-7xl px-6 mb-10 lg:px-8'>
             <h1 className='text-4xl text-center font-bold py-6'>All Animals</h1>
-             <p className='text-2xl text-center font-semibold mb-10'>sort by price</p>
+            <p className='text-2xl text-center font-semibold mb-10'>sort by price</p>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
                 {animalCard.map((animal) => (
                     <div
@@ -86,7 +86,7 @@ const AnimalsCard = async () => {
                                 </div>
 
                                 <Link
-                                    href={`/animals/${animal.id}`}
+                                    href={`/all-animals/${animal.id}`}
                                     className="rounded-xl bg-green-600 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-green-700"
                                 >
                                     View Details
