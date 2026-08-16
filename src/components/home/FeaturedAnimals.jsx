@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const FeaturedAnimals = async () => {
-    const res = await fetch("http://localhost:3000/data.json");
+    const res = await fetch("https://qurbanirhat-git-main-shahalamcse7-5675s-projects.vercel.app/data.json");
     const photos = await res.json();
     const featuredAnimals = photos.slice(0, 4);
     console.log(featuredAnimals);
