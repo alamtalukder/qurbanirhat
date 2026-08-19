@@ -35,11 +35,11 @@ const Navbar = () => {
           <ul className="flex items-center gap-2 text-sm">
 
             <li>
-              <Link href={"/signup"}>Sign Up</Link>
+              <Link href={"/signup"}>Registration</Link>
             </li>
 
             <li> 
-              <Link href={"/signin"}>Sign In</Link>
+              <Link href={"/signin"}>Log In</Link>
             </li>
           </ul>
         </div>
