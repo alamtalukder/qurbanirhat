@@ -5,7 +5,6 @@ const AnimalDetailsPage = async ({ params }) => {
   const res = await fetch('https://qurbanirhat-neon.vercel.app/data.json');
   const result = await res.json();
   const animal = result.find((animal) => animal.id === parseInt(id));
-  console.log(animal);
   return (
     <div className="mx-auto max-w-7xl mx-auto p-10 lg:px-8">
       <div className="grid grid-cols-2 gap-10 border border-gray-300 rounded-lg p-8 shadow-lg">

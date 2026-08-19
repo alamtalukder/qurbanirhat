@@ -6,8 +6,6 @@ const FeaturedAnimals = async () => {
     const res = await fetch("https://qurbanirhat-neon.vercel.app/data.json");
     const photos = await res.json();
     const featuredAnimals = photos.slice(0, 4);
-    console.log(featuredAnimals);
-
     return (
         <section className="bg-white py-20">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">

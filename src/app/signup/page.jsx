@@ -12,6 +12,7 @@ import {
     TextField,
 } from "@heroui/react";
 import { useRouter } from "next/navigation";
+import { FcGoogle } from "react-icons/fc";
 
 export default function SignUpPage() {
 
@@ -20,25 +21,30 @@ export default function SignUpPage() {
     const onSubmit = async (e) => {
         e.preventDefault();
 
-        const name = e.target.name.value; 
-        const image = e.target.image.value; 
-        const email = e.target.email.value; 
-        const password = e.target.password.value; 
+        const name = e.target.name.value;
+        const image = e.target.image.value;
+        const email = e.target.email.value;
+        const password = e.target.password.value;
 
-        console.log(name, image, email, password); 
+        console.log(name, image, email, password);
 
-        const {data, error} = await authClient.signUp.email({
-            name, 
-            image, 
+        const { data, error } = await authClient.signUp.email({
+            name,
+            image,
             email,
-            password 
+            password
         })
         if (!error) {
             router.push('/')
-            
+
         }
-        console.log({data, error})
+        console.log({ data, error })
     };
+    const handleGoogleSignIn = async () => {
+        await authClient.signIn.social({
+            provider: "google"
+        })
+    }
 
     return (
         <Card className="border mx-auto w-125 py-15 mt-14 mb-14">
@@ -111,6 +117,8 @@ export default function SignUpPage() {
                     </Button>
                 </div>
             </Form>
+            <p className="text-center text-2xl font-bold">Or</p>
+            <Button onClick={handleGoogleSignIn} variant="outline" className="w-full btn-"><FcGoogle />SignIn with Google</Button>
         </Card>
     );
 }

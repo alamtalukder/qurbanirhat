@@ -1,11 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-
-const AnimalsCard = async () => {
+const animalsCard = async () => {
     const res = await fetch("https://qurbanirhat-neon.vercel.app/data.json");
     const animalCard = await res.json();
-    console.log(animalCard);
     return (
         <div className='mx-auto max-w-7xl px-6 mb-10 lg:px-8'>
             <h1 className='text-4xl text-center font-bold py-6'>All Animals</h1>
@@ -100,4 +98,4 @@ const AnimalsCard = async () => {
     );
 };
 
-export default AnimalsCard;
+export default animalsCard;

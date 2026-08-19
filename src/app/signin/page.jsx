@@ -9,32 +9,30 @@ import {
     Form,
     Input,
     Label,
+    toast,
     TextField,
 } from "@heroui/react";
-import { FcGoogle } from "react-icons/fc";
 
 export default function SignInPage() {
-
-
     const onSubmit = async (e) => {
         e.preventDefault();
         const email = e.target.email.value;
-        const password = e.target.password.value;
-
-        console.log(email, password);
+        const password = e.target.password.value
 
         const { data, error } = await authClient.signIn.email({
             email,
             password,
             callbackURL: '/'
-        })
-        console.log({ data, error })
-    };
-    const handleGoogleSignIn = async () => {
-            await authClient.signIn.social({
-                provider: "google"
-            })
+        });
+
+        if (error) {
+            toast.danger(error.message || "Unable to sign in. Please check your credentials.");
+            return;
         }
+
+        console.log({ data });
+    };
+
 
     return (
         <Card className="border mx-auto w-125 py-15 mt-14 mb-14">
@@ -96,8 +94,6 @@ export default function SignInPage() {
                     </Button>
                 </div>
             </Form>
-            <p className="text-center text-2xl font-bold">Or</p>
-            <Button onClick={handleGoogleSignIn} variant="outline" className="w-full btn-"><FcGoogle />SignIn with Google</Button>
         </Card>
 
     );
