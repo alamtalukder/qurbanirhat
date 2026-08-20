@@ -1,12 +1,13 @@
-import Link from "next/link";
+import BookingButton from "@/components/animals/BookingButton";
 
 const AnimalDetailsPage = async ({ params }) => {
   const { id } = await params;
   const res = await fetch('https://qurbanirhat-neon.vercel.app/data.json');
   const result = await res.json();
   const animal = result.find((animal) => animal.id === parseInt(id));
+
   return (
-    <div className="mx-auto max-w-7xl mx-auto p-10 lg:px-8">
+    <div className="mx-auto max-w-7xl p-10 lg:px-8">
       <div className="grid grid-cols-2 gap-10 border border-gray-300 rounded-lg p-8 shadow-lg">
         <div className="left-size">
           <img
@@ -28,9 +29,7 @@ const AnimalDetailsPage = async ({ params }) => {
           <p><span className="font-bold">Vaccinated:</span> {animal.vaccinated ? 'Yes' : 'No'}</p>
           <p><span className="font-bold">Description:</span> {animal.description}</p>
 
-          <Link href="/" className="text-blue-500 hover:underline">
-            <button className="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition"> Book Now </button>
-          </Link>
+          <BookingButton />
         </div>
       </div>
     </div>
