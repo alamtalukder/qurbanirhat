@@ -84,7 +84,7 @@ const animalsCard = async () => {
                                 </div>
 
                                 <Link
-                                    href={`/all-animals/${animal.id}`}
+                                    href={`/details-page/${animal.id}`}
                                     className="rounded-xl bg-green-600 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-green-700"
                                 >
                                     View Details

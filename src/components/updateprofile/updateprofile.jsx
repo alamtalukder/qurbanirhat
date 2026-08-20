@@ -7,7 +7,8 @@ export function UpdateUserModal() {
     const onSubmit = async(e) => {
         e.preventDefault()
         const name = e.target.name.value
-        const image = e.target.image.value; 
+        const image = e.target.image.value;
+         
         await authClient.updateUser({
             name, image 
         })

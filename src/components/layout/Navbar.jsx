@@ -37,7 +37,7 @@ const Navbar = () => {
           </li>
 
           <li>
-            <Link href={"/profile"} className="btn btn-success text-white">Profile</Link>
+            <Link href={"/my-profile"} className="btn btn-success text-white">Profile</Link>
           </li>
         </ul>
 
