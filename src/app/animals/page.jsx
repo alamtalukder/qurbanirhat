@@ -1,13 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-const animalsCard = async () => {
+export const animalsCard = async () => {
     const res = await fetch("https://qurbanirhat-neon.vercel.app/data.json");
     const animalCard = await res.json();
     return (
         <div className='mx-auto max-w-7xl px-6 mb-10 lg:px-8'>
             <h1 className='text-4xl text-center font-bold py-6'>All Animals</h1>
-            <p className='text-2xl text-center font-semibold mb-10'>sort by price</p>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
                 {animalCard.map((animal) => (
                     <div
